@@ -1,0 +1,121 @@
+.question--offset{
+	padding-top: 75px;
+}
+.question{
+	background-color: #fff;
+	color: 
+#4C3D74;
+	.question__inner{
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: center;
+	}
+	&__title{
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 45px;
+	}
+	&__items{
+		position: relative;
+		.item{
+			text-align: start;
+			.text{
+				font-size: 18px;
+				font-weight: 500;
+			}
+			.text::after{
+				font-size: 16px;
+				content: "+";
+				position: absolute;
+				right: 0;
+			}
+		}
+		.item.item__text-more__on{
+				.text::after{
+					content: "-";
+				}
+		}
+		.item__text-more{
+			opacity: 0;
+			font-size: 0px;
+			width: 0px;
+			transition: 0.5s;
+		}
+		.item.item__text-more__on .item__text-more{
+			width: 200px;
+			font-size: 16px;
+			opacity: 1;
+		}
+		.item::after{
+			content: "";
+			background-color: #4C3D74;
+			width: 100%;
+			height: 2px;
+			display: block;
+			margin-top: 22px;
+			margin-bottom: 22px;
+		}
+		.item:first-child::before{
+			content: "";
+			background-color: #4C3D74;
+			width: 100%;
+			height: 2px;
+			display: block;
+			margin-bottom: 22px;
+		}
+	}
+	&__info{
+		display: flex;
+		flex-wrap: wrap;
+		.subject{
+			text-align: start;
+			font-weight: 700;
+			font-size: 20px;
+			position: relative;
+			padding-left: 80px;
+			max-width: 300px;
+		}
+		.subject::after{
+			content: "";
+			background-image: url(../images/telegram.svg);
+			position: absolute;
+			width: 46px;
+			height: 46px;
+			left: 0;
+			top: 0;
+		}
+		.btn{
+			margin-top: 33px;
+			width: 245px;
+			height: 60px;
+			color: #4C3D74;
+			font-size: 16px;
+			font-weight: 700;
+			text-align: center;
+			padding: 20px 66px 20px 81px;
+		}
+		.btn:hover{
+			color: #fff;
+		}
+	}
+	&__info::after{
+		margin-top: 44px;
+		content: "";
+		background-image: url(../images/person.jpg);
+		display: block;
+		width: 215px;
+		height: 215px;
+	}
+}
+@media(min-width: 665px){
+	.question{
+		&__info{
+			justify-content: space-between;
+			.btn{
+				margin-top: 0px;
+				}
+		}
+
+	}
+}
